@@ -1,3 +1,5 @@
+/* Global Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +16,8 @@
   max-width: 900px;
   margin: auto;
 }
+
+/* Header Styles */
 
 header .container {
   display: flex;
@@ -40,5 +44,53 @@ header .container nav ul li a {
 
 header .container nav ul li a:hover {
   text-decoration: underline 2px;
+}
+
+/* Main Styles */
+
+main .container .hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 88vh;
+}
+
+main .container .hero .left-side {
+  width: 40%;
+}
+
+main .container .hero .left-side img {
+  width: 100%;
+}
+
+main .container .hero .right-side {
+  width: 60%;
+}
+
+main .container .hero .right-side h2 {
+  font-size: 4rem;
+  font-family: var(--font-sora);
+  margin-bottom: 20px;
+}
+
+main .container .hero .right-side h2 strong {
+  background: #a59ae8;
+  border-radius: 10px;
+  color: #fff;
+  padding: 3px;
+}
+
+
+main .container .hero .right-side p {
+  font-family: var(--font-poppins);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+main .container .hero .right-side img {
+  width: 30px;
+  height: 30px;
 }
 
