@@ -91,18 +91,66 @@ main .container .hero .right-side p {
   display: flex;
   align-items: center;
   gap: 10px;
-  animation: fromTop 1s ease-out .5s backwards;
+  animation: fromTop 1s ease-out 0.5s backwards;
 }
 
 main .container .hero .right-side img {
   width: 30px;
   height: 30px;
-  animation: floatingToTheRight 1.5s ease infinite alternate;
+  animation: goingAndComingBack 1.5s ease infinite alternate;
+}
+
+/* Some Projects Styles */
+
+main .container .some-projects {
+  height: 100vh;
+  padding: 10px 0;
+}
+
+main .container .some-projects h2 {
+  font-family: var(--font-poppins);
+  font-size: 2rem;
+  padding: 30px;
+}
+
+main .container .some-projects .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 30px;
+}
+
+.card {
+  border-radius: 10px;
+  background: #f0f0f0;
+}
+
+.card .img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 150px;
+}
+
+.card .text {
+  padding: 10px;
+  font-family: var(--font-poppins);
+}
+
+.card .text h3 {
+  margin-bottom: 10px;
+}
+
+.card .text p {
+  opacity: 0.8;
 }
 
 /* Animations */
 
-@keyframes floatingToTheRight {
+@keyframes goingAndComingBack {
   from {
     transform: translateX(20px);
   }
@@ -122,5 +170,4 @@ main .container .hero .right-side img {
     opacity: 1;
     transform: translateY(0);
   }
-
 }
