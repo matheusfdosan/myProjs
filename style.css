@@ -21,6 +21,9 @@
 
 .logo h1 {
   font-family: var(--font-sora);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 /* Header Styles */
@@ -70,6 +73,9 @@ main .container .contact .left-side {
 main .container .hero .left-side img,
 main .container .contact .left-side img {
   width: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 main .container .hero .right-side,
@@ -82,6 +88,9 @@ main .container .hero .right-side h2 {
   font-family: var(--font-sora);
   margin-bottom: 20px;
   animation: fromTop 1s ease-out backwards;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 main .container .hero .right-side h2 strong {
@@ -98,12 +107,18 @@ main .container .hero .right-side p {
   align-items: center;
   gap: 10px;
   animation: fromTop 1s ease-out 0.5s backwards;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 main .container .hero .right-side img {
   width: 30px;
   height: 30px;
   animation: goingAndComingBack 1.5s ease infinite alternate;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 main .container .contact .right-side form {
@@ -119,6 +134,9 @@ main .container .contact .right-side form h2 {
   font-family: var(--font-poppins);
   font-size: 2rem;
   margin-bottom: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 main .container .contact .right-side form input {
@@ -146,6 +164,9 @@ main .container .contact .right-side form label {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 15px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 #textarea {
@@ -176,10 +197,15 @@ main .container .contact .right-side form button {
   padding: 15px 25px;
   cursor: pointer;
   transition: background-color 0.2s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  border-radius: 5px;
+  box-shadow: 0 0.7em 1.5em -0.5em var(--primary-color);
 }
 
 main .container .contact .right-side form button:active {
-  background-color: var(--secondary-color);
+  background-color: #5770bd;
 }
 
 /* Some Projects Styles */
@@ -194,6 +220,9 @@ main .container .all-projects h2 {
   font-family: var(--font-poppins);
   font-size: 2rem;
   padding: 30px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 main .container .some-projects .cards-grid,
@@ -206,7 +235,10 @@ main .container .all-projects .cards-grid {
 
 .card {
   border-radius: 10px;
-  background-color: #f0f0f093;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  box-shadow: 0 5px 12px 0px #dfdfdf6b;
 }
 
 .card .img {
