@@ -100,7 +100,7 @@ cardsData.forEach((card) => {
     container = document.querySelector(".cards-grid.all")
   }
 
-  container.innerHTML += `
+  const HTMLModel = `
   <div class="card">
   <div class="img" style="background-image: url(${card.img});"></div>
   <div class="text">
@@ -109,4 +109,6 @@ cardsData.forEach((card) => {
   </div>
   </div>
   `
+
+  container.insertAdjacentHTML("beforeend", HTMLModel)
 })
