@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-poppins: "Sora", sans-serif;
+  --font-sora: "Poppins", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+header .container h1 {
+  font-family: var(--font-sora);
+}
+
+header .container nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+header .container nav ul li a {
+  font-size: 1.2rem;
+  font-family: var(--font-poppins);
+  color: #000;
+  text-decoration: none;
+}
+
+header .container nav ul li a:hover {
+  text-decoration: underline 2px;
+}
+
