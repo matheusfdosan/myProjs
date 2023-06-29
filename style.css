@@ -1,9 +1,9 @@
 /* Global Styles */
-
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  outline: 0;
 }
 
 :root {
@@ -11,6 +11,24 @@
   --font-poppins: "Poppins", sans-serif;
   --primary-color: #3658c1;
   --secondary-color: #b0c3ff;
+}
+
+html {
+  font-size: 62.5%;
+  /* Para cada 1rem no código abaixo, será considerado 10px */
+}
+
+html,
+body {
+  height: 100vh;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1.6rem;
+  /* 1.6rem = 16px */
 }
 
 .container {
@@ -29,12 +47,16 @@
 /* Header Styles */
 
 header {
+  width: 100%;
   height: 10vh;
+  position: absolute;
+  z-index: 99999;
 }
 
 header .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 0;
 }
 
@@ -45,17 +67,46 @@ header .container nav ul {
 }
 
 header .container nav ul li a {
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-family: var(--font-poppins);
   color: #000;
   text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 header .container nav ul li a:hover {
   text-decoration: underline 2px;
 }
 
+header .container .burguer {
+  display: none;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 45px;
+  height: 30px;
+  cursor: pointer;
+}
+
+header .container .burguer .line {
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background: #000;
+  transition: all 0.7s ease;
+}
+
 /* Main Styles */
+
+main {
+  padding-top: 78px;
+}
+
+#projects-section {
+  padding: 30px 0;
+  padding-top: 78px;
+}
 
 main .container .hero,
 main .container .contact {
@@ -84,7 +135,7 @@ main .container .contact .right-side {
 }
 
 main .container .hero .right-side h2 {
-  font-size: 4rem;
+  font-size: 6.4rem;
   font-family: var(--font-sora);
   margin-bottom: 20px;
   animation: fromTop 1s ease-out backwards;
@@ -102,7 +153,7 @@ main .container .hero .right-side h2 strong {
 
 main .container .hero .right-side p {
   font-family: var(--font-poppins);
-  font-size: 2rem;
+  font-size: 3.2rem;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -132,7 +183,7 @@ main .container .contact .right-side form {
 
 main .container .contact .right-side form h2 {
   font-family: var(--font-poppins);
-  font-size: 2rem;
+  font-size: 3.2rem;
   margin-bottom: 20px;
   user-select: none;
   -webkit-user-select: none;
@@ -144,7 +195,7 @@ main .container .contact .right-side form input {
   height: 40px;
   padding: 15px;
   font-family: var(--font-poppins);
-  font-size: 1rem;
+  font-size: 1.6rem;
   border: none;
   border-radius: 5px;
   background-color: #f7f6fe;
@@ -161,7 +212,7 @@ main .container .contact .right-side form input:focus-within {
 
 main .container .contact .right-side form label {
   font-family: var(--font-poppins);
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 15px;
   user-select: none;
@@ -179,7 +230,7 @@ main .container .contact .right-side form label {
   margin-bottom: 20px;
   padding: 8px;
   font-family: var(--font-poppins);
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 
 #textarea:focus-within {
@@ -189,7 +240,7 @@ main .container .contact .right-side form label {
 main .container .contact .right-side form button {
   background-color: var(--primary-color);
   font-family: var(--font-poppins);
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-weight: 500;
   color: #fff;
   border: none;
@@ -218,9 +269,9 @@ main .container .all-projects {
 main .container .some-projects h2,
 main .container .all-projects h2 {
   font-family: var(--font-poppins);
-  font-size: 2rem;
-  padding: 30px;
+  font-size: 3.2rem;
   user-select: none;
+  margin-bottom: 30px;
   -webkit-user-select: none;
   -moz-user-select: none;
 }
@@ -230,7 +281,6 @@ main .container .all-projects .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
-  padding: 30px;
 }
 
 .card {
@@ -280,7 +330,7 @@ footer .container .links ul {
 
 footer .container .links ul li a {
   font-family: var(--font-poppins);
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   color: #000;
   text-decoration: none;
   font-weight: 500;
@@ -289,6 +339,47 @@ footer .container .links ul li a {
 
 footer .container .links ul li a:hover {
   text-decoration: underline;
+}
+
+/* Modal Styles */
+
+.modal-overflow {
+  display: none;
+}
+
+.modal-overflow.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-overflow.active ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-overflow.active ul li img {
+  padding-right: 10px;
+}
+
+.modal-overflow.active ul li a {
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: #000;
+  font-family: var(--font-poppins);
+  font-weight: 500;
+}
+
+.modal-overflow.active ul li:hover {
+  text-decoration: underline 2px;
 }
 
 /* Animations */
@@ -312,5 +403,77 @@ footer .container .links ul li a:hover {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+
+@media (max-width: 885px) {
+  main .container .hero .right-side h2 {
+    font-size: 5.6rem;
+  }
+
+  main .container .hero .right-side p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 714px) {
+  main .container .contact .left-side {
+    display: none;
+  }
+
+  main .container .contact .right-side {
+    width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  main .container .hero {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .container .hero .left-side {
+    width: 100%;
+  }
+
+  main .container .hero .right-side {
+    width: 100%;
+  }
+
+  main .container .hero .left-side img {
+    width: 85%;
+    margin: auto;
+  }
+
+  main .container .hero .right-side h2 {
+    font-size: 3.5rem;
+  }
+
+  main .container .hero .right-side p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 590px) {
+  footer .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  html {
+    font-size: 58%;
+  }
+}
+
+@media (max-width: 550px) {
+  header .container nav {
+    display: none;
+  }
+
+  header .container .burguer {
+    display: flex;
   }
 }
