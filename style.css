@@ -7,8 +7,8 @@
 }
 
 :root {
-  --font-poppins: "Sora", sans-serif;
-  --font-sora: "Poppins", sans-serif;
+  --font-sora: "Sora", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 }
 
 .container {
@@ -103,7 +103,6 @@ main .container .hero .right-side img {
 /* Some Projects Styles */
 
 main .container .some-projects {
-  height: 100vh;
   padding: 10px 0;
 }
 
@@ -146,6 +145,33 @@ main .container .some-projects .cards-grid {
 
 .card .text p {
   opacity: 0.8;
+}
+
+/* Footer Styles */
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+footer .container .links ul {
+  columns: 2;
+  list-style: none;
+}
+
+footer .container .links ul li a {
+  font-family: var(--font-poppins);
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+footer .container .links ul li a:hover {
+  text-decoration: underline;
 }
 
 /* Animations */
