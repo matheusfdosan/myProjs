@@ -1,4 +1,5 @@
 /* Global Styles */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -49,7 +50,7 @@ body {
 header {
   width: 100%;
   height: 10vh;
-  position: absolute;
+  position: relative;
   z-index: 99999;
 }
 
@@ -263,7 +264,7 @@ main .container .contact .right-side form button:active {
 
 main .container .some-projects,
 main .container .all-projects {
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 main .container .some-projects h2,
@@ -312,6 +313,32 @@ main .container .all-projects .cards-grid {
 
 .card .text p {
   opacity: 0.8;
+}
+
+main .container .some-projects a {
+  background-color: var(--primary-color);
+  font-family: var(--font-poppins);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  box-shadow: 0 0.7em 1.5em -0.5em var(--primary-color);
+  display: block;
+  min-width: 200px;
+  max-width: 300px;
+  text-align: center;
+  margin: 35px auto;
+}
+
+main .container .some-projects a:active {
+  background-color: #5770bd;
 }
 
 /* Footer Styles */
