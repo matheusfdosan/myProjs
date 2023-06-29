@@ -9,8 +9,8 @@
 :root {
   --font-sora: "Sora", sans-serif;
   --font-poppins: "Poppins", sans-serif;
-  --primary-color: #a59ae8;
-  --secondary-color: #8677e9;
+  --primary-color: #3658c1;
+  --secondary-color: #b0c3ff;
 }
 
 .container {
@@ -166,7 +166,7 @@ main .container .contact .right-side form label {
 }
 
 main .container .contact .right-side form button {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   font-family: var(--font-poppins);
   font-size: 1rem;
   font-weight: 500;
@@ -175,13 +175,12 @@ main .container .contact .right-side form button {
   border-radius: 5px;
   padding: 15px 25px;
   cursor: pointer;
-  transition: background-color .2s ease-in ;
+  transition: background-color 0.2s ease-in;
 }
 
-main .container .contact .right-side form button:hover {
-  background-color: var(--primary-color);
+main .container .contact .right-side form button:active {
+  background-color: var(--secondary-color);
 }
-
 
 /* Some Projects Styles */
 
@@ -207,7 +206,7 @@ main .container .all-projects .cards-grid {
 
 .card {
   border-radius: 10px;
-  background: #f0f0f0;
+  background-color: #f0f0f093;
 }
 
 .card .img {
