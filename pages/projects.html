@@ -10,7 +10,7 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="../style.css" />
 
@@ -41,9 +41,14 @@
 
     <main id="projects-section">
       <div class="container">
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Search...">
+        </div>
+
         <div class="all-projects">
           <h2>All our projects are here:</h2>
           <div class="cards-grid all"></div>
+          <div class="project-not-found">Project Not Found!</div>
         </div>
       </div>
     </main>
@@ -89,5 +94,6 @@
 
     <script src="../scripts/cards.js"></script>
     <script src="../scripts/menu.js"></script>
+    <script src="../scripts/search.js"></script>
   </body>
 </html>

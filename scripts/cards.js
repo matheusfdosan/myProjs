@@ -101,7 +101,7 @@ cardsData.forEach((card) => {
   }
 
   const HTMLModel = `
-  <div class="card">
+  <div class="card" data-projects="${card.title + " " + card.description}">
   <div class="img" style="background-image: url(${card.img});"></div>
   <div class="text">
   <h3>${card.title}</h3>
