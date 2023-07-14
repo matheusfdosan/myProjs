@@ -29,7 +29,7 @@ body {
 
 body {
   font-size: 1.6rem;
-  /* 1.6rem = 16px */
+  height: fit-content;
 }
 
 .container {
@@ -45,13 +45,26 @@ body {
   -moz-user-select: none;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Header Styles */
+
+.addShadow {
+  transition: box-shadow 0.3s ease-out;
+  box-shadow: 0 4px 6px -1px hwb(0 0% 100%/0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
 
 header {
   width: 100%;
-  height: 10vh;
-  position: relative;
-  z-index: 99999;
+  height: fit-content;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 header .container {
@@ -101,7 +114,7 @@ header .container .burguer .line {
 /* Main Styles */
 
 #projects-section {
-  padding: 20px 0;
+  padding: 98px 0 20px;
 }
 
 .search-container {
@@ -139,6 +152,7 @@ main .container .contact {
   align-items: center;
   gap: 20px;
   height: 90vh;
+  margin-top: 78px;
 }
 
 main .container .hero .left-side,
@@ -411,7 +425,7 @@ footer .container .links ul li a:hover {
   justify-content: center;
   align-items: center;
   background: #fff;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -492,6 +506,8 @@ footer .container .links ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 60vh;
+    margin: 118px auto 180px;
   }
 
   main .container .hero .left-side {
@@ -503,8 +519,9 @@ footer .container .links ul li a:hover {
   }
 
   main .container .hero .left-side img {
-    width: 85%;
+    width: 75%;
     margin: auto;
+    display: block;
   }
 
   main .container .hero .right-side h2 {

@@ -38,7 +38,7 @@ API.then((response) => {
       const allCards = homeContainer.children
 
       for (let i = 6; i <= allCards.length; i++) {
-        allCards[i].style.display = "none"
+        allCards[i].classList.add("hidden")
       }
     })
 })

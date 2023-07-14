@@ -18,15 +18,16 @@ burguer.addEventListener("click", ({ target }) => {
   }
 
   if (modalActive === false) {
-    document.body.style.overflowY = "hidden"
+    document.querySelector("html").style.overflowY = "hidden"
     modal.classList.add("active")
     modalActive = true
 
     lineOne.style.transform = "rotate(45deg) translate(9px, 10px)"
     lineTwo.style.opacity = "0"
     lineThree.style.transform = "rotate(-45deg) translate(9px, -10px)"
+    document.querySelector("body > header").classList.remove("addShadow")
   } else {
-    document.body.style.overflowY = "scroll"
+    document.querySelector("html").style.overflowY = "scroll"
     modal.classList.remove("active")
     modalActive = false
 
