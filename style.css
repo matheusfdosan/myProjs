@@ -333,10 +333,18 @@ main .container .all-projects .cards-grid {
 
 .card .text h3 {
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 
 .card .text p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
   opacity: 0.8;
+  word-break: keep-all;
 }
 
 main .container .some-projects a {
@@ -480,7 +488,6 @@ footer .container .links ul li a:hover {
 }
 
 @media (max-width: 620px) {
-
   main .container .hero {
     flex-direction: column;
     justify-content: center;
