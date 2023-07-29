@@ -328,12 +328,19 @@ main .container .all-projects .cards-grid {
   -webkit-user-select: none;
   -moz-user-select: none;
   box-shadow: 0 5px 12px 0px #dfdfdf6b;
+  transition: transform 200ms ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card .img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: #5b5b5b33 0px -7px 14px -4px inset;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 100%;
@@ -453,6 +460,86 @@ footer .container .links ul li a:hover {
 
 .modal-overflow.active ul li:hover {
   text-decoration: underline 2px;
+}
+
+/* Card Modal */
+
+.card-modal {
+  display: none;
+}
+
+.card-modal.on {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 20px 30px 50px;
+  z-index: 99999;
+}
+
+.card-modal.on .cross {
+  display: block;
+  margin: 20px 95%;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 200ms ease;
+}
+
+.card-modal.on .cross:hover {
+  transform: scale(1.1);
+}
+
+.card-modal.on .cross .bar {
+  width: 3px;
+  height: 27px;
+  background-color: #000;
+  border-radius: 5px;
+}
+
+.card-modal.on .cross .bar1 {
+  transform: rotate(45deg) translate(11px, -7px);
+}
+
+.card-modal.on .cross .bar2 {
+  transform: rotate(-45deg) translate(26px, -8px);
+}
+
+.card-modal.on .container h2 {
+  font-size: 3rem;
+  font-family: var(--font-sora);
+  text-transform: capitalize;
+}
+
+.card-modal.on .container img {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: scale-down;
+  margin: 25px auto;
+}
+
+.card-modal.on .container p {
+  font-family: var(--font-poppins);
+  margin-bottom: 20px;
+}
+
+.card-modal.on .container h3 {
+  font-family: var(--font-poppins);
+}
+
+.card-modal.on .container .techs {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin: 15px 0;
+}
+
+.card-modal.on .container span {
+  font-family: var(--font-poppins);
 }
 
 /* Animations */

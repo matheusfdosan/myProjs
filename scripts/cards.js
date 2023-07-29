@@ -1,9 +1,3 @@
-/**
- * Pegar a URL
- * Filtrar docs e markdown
- * Adicionar cards
- */
-
 async function start() {
   const username = "matheusfdosan"
   const perPage = 100
@@ -20,9 +14,11 @@ async function start() {
     }
 
     const HTMLModel = `
-      <div class="card" data-projects="${
-        repos.name.replace(/-/g, " ") + " " + repos.description
-      }">
+      <div class="card" data-techs="${repos.topics}" data-name="${
+      repos.name
+    }" data-projects="${
+      repos.name.replace(/-/g, " ") + " " + repos.description
+    }">
         <div class="img" style="background-image: url(https://raw.githubusercontent.com/matheusfdosan/${
           repos.name
         }/master/.github/preview.png);"></div>
@@ -34,16 +30,62 @@ async function start() {
 
     container.insertAdjacentHTML("beforeend", HTMLModel)
   })
+
+  /* ---------- */
+  /*    Modal   */
+  /* ---------- */
+
+  const cards = container.children
+
+  for (let i = 0; i <= cards.length; i++) {
+    cards[i].onclick = (event) => {
+      document.querySelector(".card-modal").classList.add("on")
+      document.querySelector(".card-modal").style.overflowY = "auto"
+      document.querySelector("html").style.overflowY = "hidden"
+
+      let card = event.target.parentElement
+
+      if (event.target.parentElement.className === "text") {
+        card = event.target.parentElement.parentElement
+      }
+
+      /* Add modal info */
+
+      document.querySelector(
+        ".card-modal img"
+      ).src = `https://raw.githubusercontent.com/matheusfdosan/${card.getAttribute(
+        "data-name"
+      )}/master/.github/preview.png`
+
+      document.querySelector(".card-modal .container h2").innerText = card
+        .getAttribute("data-name")
+        .replace(/-/g, " ")
+
+      document.querySelector(".card-modal p").innerHTML =
+        card.querySelector("div.text > p").innerText
+
+      document.querySelector(".card-modal .techs").innerHTML = card
+        .getAttribute("data-techs")
+        .replace(/,/g, ", ")
+
+      document.querySelector(".card-modal span a").href =
+        "https://matheusfdosan.github.io/" + card.getAttribute("data-name")
+
+      /* Close modal */
+      document.querySelector(".cross").addEventListener("click", () => {
+        document.querySelector("html").style.overflowY = "scroll"
+        document.querySelector(".card-modal").classList.remove("on")
+      })
+    }
+  }
 }
 
-start()
-  .then(() => {
-    const homeContainer = document.querySelector(".some-projects > .cards-grid")
+start().finally(() => {
+  const cards = document.querySelectorAll(".some-projects .card")
+  console.log(cards)
 
-    const allCards = homeContainer.children
-
-    for (let i = 6; i <= allCards.length; i++) {
-      allCards[i].classList.add("hidden")
-    }
-  })
-  .catch((err) => console.log("A little something wrong isn't right! " + err))
+  for (const key in cards) {
+    if (key >= 6) {
+    cards[key].classList.add('hidden')}
+  }
+})
