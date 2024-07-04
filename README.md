@@ -31,7 +31,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-A ideia de fazer esse site surgiu quando eu estava estudando o `fetch` do JavaScript. E, pensei que seria muito legal mostrar os minhas criações e projetos!
+A ideia de fazer esse site surgiu quando eu estava estudando o `fetch` do JavaScript. E, pensei que seria muito legal mostrar meus projetos através dessa ferramenta!
 
 Veja o site clicando nesse [link](https://matheusfdosan.github.io/myRepos/).
 
