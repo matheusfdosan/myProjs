@@ -1,8 +1,7 @@
 <h1 align="center"> myRepos </h1>
 
 <p align="center">
-Fui fazer um teste e acabei criando um site inteiro 😐👍
-
+"Portfólio online" para exibir meus projetos de forma organizada e acessível.
 </p>
 
 <p align="center">
@@ -19,7 +18,7 @@ Fui fazer um teste e acabei criando um site inteiro 😐👍
 <br>
 
 <p align="center">
-  <img alt="rocketpay" src=".github/preview.png" width="100%" style='border-radius: 10px'>
+  <img alt="myRepos" src=".github/preview.png" width="100%" style='border-radius: 10px'>
 </p>
 
 ## Tecnologias
